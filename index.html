@@ -3,123 +3,232 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ethan Jhong - Computer Engineering Student</title>
+    <title>Ethan Jhong - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="script.js" defer></script>
 </head>
 <body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
     <nav id="navbar">
         <div class="nav-content">
-            <h1>Ethan Jhong</h1>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
+            <div class="logo">EJ</div>
+            <div class="menu-btn">
+                <div class="menu-btn__burger"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
             </ul>
         </div>
     </nav>
 
-    <header id="hero">
-        <div class="hero-content">
-            <h1>Ethan Jhong</h1>
-            <h2>Computer Engineering Student</h2>
-            <p>University of Michigan | GPA: 3.964</p>
-            <div class="contact-links">
-                <a href="mailto:ejhong@umich.edu">ejhong@umich.edu</a>
-                <a href="tel:347-459-7816">347-459-7816</a>
-                <a href="https://www.linkedin.com/in/ethan-jhong" target="_blank">LinkedIn</a>
-                <a href="https://github.com/ejhon1116" target="_blank">GitHub</a>
-            </div>
+    <section id="home" class="hero">
+        <div class="glitch-container">
+            <div class="glitch" data-text="Ethan Jhong">Ethan Jhong</div>
         </div>
-    </header>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I'm a Computer Engineering student at the University of Michigan with a passion for machine learning, algorithmic trading, and robotics. Currently working with the Michigan Mars Rover team and maintaining a 3.964 GPA while pursuing innovative projects in various technical domains.</p>
-    </section>
-
-    <section id="experience">
-        <h2>Experience</h2>
-        <div class="experience-item">
-            <h3>Michigan Mars Rover - Autonomous Navigation Team Member</h3>
-            <p class="date">September 2024 - Present</p>
-            <ul>
-                <li>Refactored A-Star search algorithm using ROS2 framework</li>
-                <li>Implemented obstacle avoidance system</li>
-                <li>Developed testing suite for search algorithms</li>
-            </ul>
+        <div class="hero-subtitle">
+            <span class="typed-text"></span><span class="cursor">&nbsp;</span>
         </div>
-
-        <div class="experience-item">
-            <h3>Computer Science Tutor - University of Michigan</h3>
-            <p class="date">August 2023 - Present</p>
-            <ul>
-                <li>Provided comprehensive assistance for programming courses</li>
-                <li>Improved student test scores by over one letter grade</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <h3>Sign Language CNN</h3>
-                <p>Convolutional neural network for ASL translation with 99.9% accuracy</p>
-                <p class="tech-stack">Python, TensorFlow, C++</p>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
             </div>
-
-            <div class="project-card">
-                <h3>Algorithmic Trading Program</h3>
-                <p>LSTM neural network for market prediction and automated trading</p>
-                <p class="tech-stack">Python, Backtrader</p>
-            </div>
-
-            <div class="project-card">
-                <h3>PC Parts Website</h3>
-                <p>Full-stack web application for PC component comparison</p>
-                <p class="tech-stack">Python, JavaScript, MongoDB, AWS</p>
-                <a href="https://pc-part-builder.work.gd" target="_blank">Live Demo</a>
+            <div class="arrows">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
     </section>
 
-    <section id="skills">
-        <h2>Technical Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-category">
-                <h3>Languages</h3>
-                <ul>
-                    <li>Java</li>
-                    <li>JavaScript</li>
-                    <li>Python</li>
-                    <li>C++</li>
-                </ul>
+    <section id="about" class="section">
+        <div class="section-content reveal">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>Computer Engineering student at the University of Michigan with a passion for innovation and technology. Maintaining a 3.964 GPA while pursuing cutting-edge projects in machine learning, robotics, and algorithmic trading.</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <h3>3.964</h3>
+                            <p>GPA</p>
+                        </div>
+                        <div class="stat">
+                            <h3>10+</h3>
+                            <p>Projects</p>
+                        </div>
+                        <div class="stat">
+                            <h3>3+</h3>
+                            <p>Years Coding</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-info">
+                        <a href="mailto:ejhong@umich.edu" class="contact-link">
+                            <i class="fas fa-envelope"></i>
+                            <span>ejhong@umich.edu</span>
+                        </a>
+                        <a href="tel:347-459-7816" class="contact-link">
+                            <i class="fas fa-phone"></i>
+                            <span>347-459-7816</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/ethan-jhong" target="_blank" class="contact-link">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/ejhon1116" target="_blank" class="contact-link">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="skill-category">
-                <h3>Developer Tools</h3>
-                <ul>
-                    <li>ROS2</li>
-                    <li>Git</li>
-                    <li>VS Code</li>
-                    <li>MongoDB</li>
-                </ul>
+        </div>
+    </section>
+
+    <section id="experience" class="section">
+        <div class="section-content reveal">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Michigan Mars Rover</h3>
+                        <p class="timeline-date">Sept 2024 - Present</p>
+                        <ul>
+                            <li>Refactored A-Star search algorithm using ROS2</li>
+                            <li>Implemented obstacle avoidance system</li>
+                            <li>Developed comprehensive testing suite</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Computer Science Tutor</h3>
+                        <p class="timeline-date">Aug 2023 - Present</p>
+                        <ul>
+                            <li>Improved student grades by over one letter</li>
+                            <li>Taught advanced programming concepts</li>
+                            <li>Mentored 7+ students</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="skill-category">
-                <h3>Libraries</h3>
-                <ul>
-                    <li>TensorFlow</li>
-                    <li>Numpy</li>
-                    <li>Pandas</li>
-                    <li>Express</li>
-                </ul>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="section-content reveal">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Sign Language CNN</h3>
+                        <p>99.9% accurate ASL translation using TensorFlow</p>
+                        <div class="tech-stack">
+                            <span>Python</span>
+                            <span>TensorFlow</span>
+                            <span>C++</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Algorithmic Trading</h3>
+                        <p>LSTM-based market prediction system</p>
+                        <div class="tech-stack">
+                            <span>Python</span>
+                            <span>Backtrader</span>
+                            <span>LSTM</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-icon">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <h3>PC Parts Website</h3>
+                        <p>Full-stack component comparison platform</p>
+                        <div class="tech-stack">
+                            <span>MongoDB</span>
+                            <span>Express</span>
+                            <span>AWS</span>
+                        </div>
+                        <a href="https://pc-part-builder.work.gd" target="_blank" class="project-link">View Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="section-content reveal">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-container">
+                <div class="skills-category">
+                    <h3>Languages</h3>
+                    <div class="skill-items">
+                        <div class="skill-item" data-skill="Java">
+                            <div class="skill-progress" data-progress="90"></div>
+                        </div>
+                        <div class="skill-item" data-skill="Python">
+                            <div class="skill-progress" data-progress="95"></div>
+                        </div>
+                        <div class="skill-item" data-skill="C++">
+                            <div class="skill-progress" data-progress="85"></div>
+                        </div>
+                        <div class="skill-item" data-skill="JavaScript">
+                            <div class="skill-progress" data-progress="80"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3>Tools & Frameworks</h3>
+                    <div class="tools-grid">
+                        <div class="tool">
+                            <i class="fas fa-code-branch"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="tool">
+                            <i class="fas fa-robot"></i>
+                            <span>ROS2</span>
+                        </div>
+                        <div class="tool">
+                            <i class="fas fa-database"></i>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="tool">
+                            <i class="fas fa-code"></i>
+                            <span>VS Code</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>© 2024 Ethan Jhong. All rights reserved.</p>
+        <div class="footer-content">
+            <p>© 2024 Ethan Jhong</p>
+            <div class="social-links">
+                <a href="https://github.com/ejhon1116" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/ethan-jhong" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
