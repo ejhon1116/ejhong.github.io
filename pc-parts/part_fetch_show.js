@@ -1,7 +1,7 @@
 // Fetch items from the API
 async function fetchItems() {
     try {
-        const response = await fetch('http://18.191.202.110:8000/api/parts');
+        const response = await fetch('https://nmzggks95b.execute-api.us-east-2.amazonaws.com/');
         const items = await response.json();
         return items;
     } catch (error) {
