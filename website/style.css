@@ -1,0 +1,106 @@
+
+/* Global Styles */
+body {
+    background-color: #f0f4f8;
+    color: #2d3748;
+}
+
+.container {
+    max-width: 1500px;
+}
+
+/* Filter Styles */
+.filters {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+}
+
+.filters div {
+    margin-bottom: 20px;
+}
+
+.filters label {
+    margin-bottom: 8px;
+}
+
+.filters input[type="number"],
+.filters input[type="text"] {
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    padding: 8px 12px;
+    width: 100%;
+}
+
+[col="1"] {
+    width: 15%;
+}
+[col="2"] {
+    width: 10%;
+}
+[col="3"] {
+    width: 65%;
+}
+[col="4"] {
+    width: 10%;
+}
+
+td[col="3"] > a {
+    color: #0000FF;
+    text-decoration: underline #0000FF;
+}
+
+/* Checkbox Styles */
+input[type="checkbox"] {
+    margin-right: 4px;
+}
+
+#type-checkboxes > div,
+#brand-checkboxes > div {
+    margin-bottom: 5px;
+}
+
+#type-deselect,
+#brand-deselect {
+    background-color: #aeaeae;
+    border: none;
+    color: white;
+    padding: 4px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Table Styles */
+table {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    table-layout: fixed;
+}
+
+th {
+    background-color: #4a5568;
+    color: #ffffff;
+}
+
+th, td {
+    padding: 12px 16px;
+}
+
+tr:nth-child(even) {
+    background-color: #edf2f7;
+}
+
+/* Input Styles */
+input[type="number"],
+input[type="text"] {
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Building Website</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet"></link>
+</head>
+<body class="font-sans">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-4xl font-bold text-center mb-8">PC Building Website</h1>
+        <div class="flex flex-col md:flex-row gap-8">
+            <div class="filters p-6 md:w-1/4">
+                <h2 class="text-2xl font-semibold mb-4">Item Filters</h2>
+                <div class="mb-4">
+                    <label for="price-limit-input" class="block mb-2">Max Price:</label>
+                    <input type="number" id="price-limit-input" value="100000" class="w-full p-2">
+                </div>
+                <div class="mb-4">
+                    <label for="name-input" class="block mb-2">Name Filter:</label>
+                    <input type="text" id="name-input" class="w-full p-2">
+                </div>
+                <div id="type-checkboxes" class="mb-4">
+                    <h3 class="text-lg font-semibold mb-2">Filter by Type:</h3>
+                    <button id="type-deselect">Deselect All</button>
+                </div>
+                <div id="brand-checkboxes" class="mb-4">
+                    <h3 class="text-lg font-semibold mb-2">Filter by Brand:</h3>
+                    <button id="brand-deselect">Deselect All</button>
+                </div>
+            </div>
+            <div class="md:w-3/4">
+                <table class="w-full">
+                    <thead>
+                        <tr>
+                            <th class="p-3 text-left" col="1">Type</th>
+                            <th class="p-3 text-left" col="2">Brand</th>
+                            <th class="p-3 text-left" col="3">Name</th>
+                            <th class="p-3 text-left" col="4">Price</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
