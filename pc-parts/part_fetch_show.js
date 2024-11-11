@@ -43,7 +43,7 @@ function generateTable(items, priceLimit, nameFilter, typeBlacklist, brandBlackl
 
             const link = document.createElement('a');
             link.setAttribute('href', item.url);
-            link.textContent = item.name;
+            link.textContent = item.brand + " " + item.name;
             name.appendChild(link);
 
 
