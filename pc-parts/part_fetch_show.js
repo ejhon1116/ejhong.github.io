@@ -11,7 +11,7 @@ async function fetchItems() {
 }
 
 // Generate table based on items and price limit
-function generateTable(items, priceLimit, nameFilter, typeBlacklist, brandBlacklist) {
+function generateTable(items, start, end, priceLimit, nameFilter, typeBlacklist, brandBlacklist) {
     const tableBody = document.getElementById('table-body');
     tableBody.innerHTML = ''; // Clear existing content
     let odd = true;
@@ -21,41 +21,43 @@ function generateTable(items, priceLimit, nameFilter, typeBlacklist, brandBlackl
     i = 0;
     items.every(item => {
         if (parseFloat(item.price) <= priceLimit && item.name.toLowerCase().includes(nameFilter.toLowerCase()) && !typeBlacklist.includes(item.type) && !brandBlacklist.includes(item.brand)) {
-            if(i > 10) {
+            if(i > end) {
                 return false;
             }
-            const row = document.createElement('tr');
+            if(i > start && i < end) {
+                const row = document.createElement('tr');
 
-            const type = document.createElement('td');
-            type.setAttribute("col", 1);
-            type.textContent = item.type;
-            row.appendChild(type);
+                const type = document.createElement('td');
+                type.setAttribute("col", 1);
+                type.textContent = item.type;
+                row.appendChild(type);
 
-            const brand = document.createElement('td');
-            brand.setAttribute("col", 2);
-            brand.textContent = item.brand;
-            row.appendChild(brand);
+                const brand = document.createElement('td');
+                brand.setAttribute("col", 2);
+                brand.textContent = item.brand;
+                row.appendChild(brand);
 
-            const name = document.createElement('td');
-            name.setAttribute("col", 3);
-            row.appendChild(name);
+                const name = document.createElement('td');
+                name.setAttribute("col", 3);
+                row.appendChild(name);
 
-            const price = document.createElement('td');
-            price.setAttribute("col", 4);
-            price.textContent = '$' + item.price;
-            row.appendChild(price);
+                const price = document.createElement('td');
+                price.setAttribute("col", 4);
+                price.textContent = '$' + item.price;
+                row.appendChild(price);
 
-            const link = document.createElement('a');
-            link.setAttribute('href', item.url);
-            link.textContent = item.name;
-            name.appendChild(link);
+                const link = document.createElement('a');
+                link.setAttribute('href', item.url);
+                link.textContent = item.name;
+                name.appendChild(link);
 
 
-            row.className = odd ? "odd" : "even";
+                row.className = odd ? "odd" : "even";
 
-            tableBody.appendChild(row);
+                tableBody.appendChild(row);
 
-            odd = !odd;
+                odd = !odd;
+            }
             i++;
             console.log(item.name)
         }
@@ -185,23 +187,35 @@ async function initPage() {
     const items = await fetchItems();
     sortItems(items);
 
-    num_items = items.length
+    items_per_page = 50
+    start = 0;
+    end = items_per_page - 1;
+    num_pages = items.length / items_per_page;
+    curr_page = 0;
+    pagination = document.getElementById("pagination")
 
+    next_page_link = document.createElement("a")
+    link.href = "#";
+    link.innerText = i;
+
+    next_page_link.addEventListener("click", (event) => {
+        event.preventDefault();
+    });
 
     const price_limit_input = document.getElementById('price-limit-input');
     price_limit_input.addEventListener('input', function() {
         priceLimit = parseFloat(price_limit_input.value) || 1000000;
-        generateTable(items, priceLimit, name, blacklisted_types, blacklisted_brands);
+        generateTable(items, start, end, priceLimit, name, blacklisted_types, blacklisted_brands);
     });
     const name_input = document.getElementById('name-input');
 
     name_input.addEventListener('input', function() {
         name = name_input.value;
-        generateTable(items, priceLimit, name_input.value, blacklisted_types, blacklisted_brands);
+        generateTable(items, start, end, priceLimit, name_input.value, blacklisted_types, blacklisted_brands);
     });
 
     generateCheckbox(items);
-    generateTable(items, priceLimit, name, blacklisted_types, blacklisted_brands);
+    generateTable(items, start, end, priceLimit, name, blacklisted_types, blacklisted_brands);
 }
 
 let blacklisted_types = [];
