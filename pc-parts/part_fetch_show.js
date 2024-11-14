@@ -203,6 +203,7 @@ async function initPage() {
         curr_page++;
         start += curr_page + items_per_page
         end += curr_page + items_per_page
+        generateTable(items, start, end, priceLimit, name, blacklisted_types, blacklisted_brands);
     });
 
     pagination.appendChild(next_page_link)
