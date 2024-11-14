@@ -196,7 +196,7 @@ async function initPage() {
 
     next_page_link = document.createElement("a")
     next_page_link.href = "#";
-    next_page_link.innerText = i;
+    next_page_link.innerText = "->";
 
     next_page_link.addEventListener("click", (event) => {
         event.preventDefault();
