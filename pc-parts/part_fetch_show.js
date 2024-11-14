@@ -12,6 +12,7 @@ async function fetchItems() {
 
 // Generate table based on items and price limit
 function generateTable(items, start, end, priceLimit, nameFilter, typeBlacklist, brandBlacklist) {
+    console.log('${end-start} ' + end-start);
     const tableBody = document.getElementById('table-body');
     tableBody.innerHTML = ''; // Clear existing content
     let odd = true;
@@ -59,7 +60,6 @@ function generateTable(items, start, end, priceLimit, nameFilter, typeBlacklist,
                 odd = !odd;
             }
             i++;
-            console.log(item.name)
         }
         return true;
     });
