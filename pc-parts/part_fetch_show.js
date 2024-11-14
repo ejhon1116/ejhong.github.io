@@ -200,7 +200,12 @@ async function initPage() {
 
     next_page_link.addEventListener("click", (event) => {
         event.preventDefault();
+        curr_page++;
+        start += curr_page + items_per_page
+        end += curr_page + items_per_page
     });
+
+    pagination.appendChild(next_page_link)
 
     const price_limit_input = document.getElementById('price-limit-input');
     price_limit_input.addEventListener('input', function() {
