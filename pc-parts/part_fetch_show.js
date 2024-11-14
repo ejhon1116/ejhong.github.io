@@ -18,8 +18,12 @@ function generateTable(items, priceLimit, nameFilter, typeBlacklist, brandBlackl
 
 
     // Table Creation
-    items.forEach(item => {
+    i = 0;
+    items.every(item => {
         if (parseFloat(item.price) <= priceLimit && item.name.toLowerCase().includes(nameFilter.toLowerCase()) && !typeBlacklist.includes(item.type) && !brandBlacklist.includes(item.brand)) {
+            if(i > 10) {
+                return false;
+            }
             const row = document.createElement('tr');
 
             const type = document.createElement('td');
@@ -52,6 +56,8 @@ function generateTable(items, priceLimit, nameFilter, typeBlacklist, brandBlackl
             tableBody.appendChild(row);
 
             odd = !odd;
+            i++;
+            return true;
         }
     });
 }
@@ -177,6 +183,8 @@ function sortItems(items) {
 async function initPage() {
     const items = await fetchItems();
     sortItems(items);
+
+    num_items = items.length
 
 
     const price_limit_input = document.getElementById('price-limit-input');
