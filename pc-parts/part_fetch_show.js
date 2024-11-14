@@ -58,8 +58,8 @@ function generateTable(items, priceLimit, nameFilter, typeBlacklist, brandBlackl
             odd = !odd;
             i++;
             console.log(item.name)
-            return true;
         }
+        return true;
     });
 }
 
