@@ -195,8 +195,8 @@ async function initPage() {
     pagination = document.getElementById("pagination")
 
     next_page_link = document.createElement("a")
-    link.href = "#";
-    link.innerText = i;
+    next_page_link.href = "#";
+    next_page_link.innerText = i;
 
     next_page_link.addEventListener("click", (event) => {
         event.preventDefault();
